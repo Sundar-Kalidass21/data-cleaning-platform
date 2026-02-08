@@ -1,0 +1,56 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.env
+.env.*
+*.log
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# -------------------------
+# FastAPI / Uvicorn
+# -------------------------
+*.sqlite3
+*.db
+
+# -------------------------
+# OS files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Editor / IDE
+# -------------------------
+.vscode/
+.idea/
+*.swp
+
+# -------------------------
+# Data files (CSV uploads)
+# -------------------------
+data/
+*.csv
+*.parquet
+
+# -------------------------
+# Node / Frontend (future)
+# -------------------------
+node_modules/
+.next/
+dist/
+build/
+
+# -------------------------
+# Docker
+# -------------------------
+*.pid
