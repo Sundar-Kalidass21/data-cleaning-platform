@@ -2,30 +2,39 @@ import Link from "next/link"
 
 export function Sidebar() {
   return (
-    <aside className="w-60 border-r bg-white hidden md:flex flex-col">
-      <div className="px-5 py-4 text-sm font-semibold text-gray-900">
-        Workspace
+    <aside className="hidden md:flex w-64 flex-col bg-[#eef0f7] border-r px-4 py-6">
+      
+      {/* Logo */}
+      <div className="mb-8 flex items-center gap-2 font-semibold text-indigo-600">
+        <div className="h-8 w-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs">
+          D
+        </div>
+        DataClean
       </div>
 
-      <nav className="px-3 space-y-1 text-sm">
+      {/* Menu */}
+      <nav className="space-y-1 text-sm">
         {[
-          ["Dashboard", "/dashboard"],
-          ["Uploads", "/dashboard/uploads"],
-          ["Jobs", "/dashboard/jobs"],
-          ["Settings", "/dashboard/settings"],
-        ].map(([label, href]) => (
-          <Link
-            key={label}
-            href={href}
-            className="block rounded-md px-3 py-2 hover:bg-zinc-100"
+          "Dashboard",
+          "Uploads",
+          "Jobs",
+          "Settings",
+        ].map((item) => (
+          <div
+            key={item}
+            className={`px-3 py-2 rounded-lg cursor-pointer
+              ${item === "Dashboard"
+                ? "bg-indigo-100 text-indigo-700 font-medium"
+                : "text-gray-600 hover:bg-white"}`}
           >
-            {label}
-          </Link>
+            {item}
+          </div>
         ))}
       </nav>
 
-      <div className="mt-auto p-4 text-xs text-gray-500">
-        © Data Platform
+      {/* Footer */}
+      <div className="mt-auto pt-6 text-xs text-gray-500">
+        © 2026 DataClean
       </div>
     </aside>
   )
